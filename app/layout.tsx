@@ -1,0 +1,18 @@
+import '@/app/ui/global.css';
+import { inter } from '@/app/ui/fonts';
+
+import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <PrimeReactProvider>
+      <html lang="en">
+        <body className={`${inter.className} antialiased`}>{children}</body>
+      </html>
+    </PrimeReactProvider>
+  );
+}
